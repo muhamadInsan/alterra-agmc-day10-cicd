@@ -43,7 +43,7 @@ jobs:
       
       - name: build docker container
         run: |
-          docker build tag minsanr/go-crud-norun minsanr/go-crud:v1 
+          docker build -t minsanr/go-crud:v1 . 
       
       - name: push docker container
         run: |
