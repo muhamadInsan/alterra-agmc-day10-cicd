@@ -43,8 +43,8 @@ jobs:
       
       - name: build docker container
         run: |
-          make build-image
+          docker build . -t ${IMAGE_TAG_NAME} 
       
       - name: push docker container
         run: |
-          make push-image
+          docker push ${IMAGE_TAG_NAME}
